@@ -37,4 +37,8 @@ export class AppComponent {
   ngOnInit(){
     Theme()
   }
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
+  }
 }

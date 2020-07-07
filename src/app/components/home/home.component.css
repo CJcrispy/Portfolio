@@ -1,14 +1,46 @@
-#home{
-    height: calc(100vh - 3rem);
-    row-gap: 1rem;
+.container-fluid {
+  background: url('../../../assets/pictures/background1.jpg') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.home__data {
-    align-self: center;
+.container p {
+    font-size: 3rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .container p span.typed-text {
+    font-weight: normal;
+    color: #dd7732;
+  }
+  .container p span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+  }
+  .container p span.cursor.typing {
+    animation: none;
+  }
+  @keyframes blink {
+    0%  { background-color: #ccc; }
+    49% { background-color: #ccc; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: #ccc; }
+  }
+
+button {
+    margin-top: 5px;
 }
 
 .home_title {
     font-size: var(--big-font-size);
+    margin-top: var(--mb-3);
     margin-bottom: var(--mb-5);
 }
 
@@ -16,50 +48,17 @@
     color: var(--first-color);
 }
 
-.home_social{
-    display: flex;
-    flex-direction: column;
-}
 
-.home_social i{
+
+.social-links i{
+    padding: 5px;
     width: max-content;
+    margin-top: var(--mb-2);
     margin-bottom: var(--mb-2);
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--second-color);
 }
 
 .home_social-icon:hover{
     color: var(--first-color);
-}
-
-.home_img img{
-    position: absolute;
-    border-radius: 50%;
-    align-self: center;
-}
-
-/* For small screens */
-@media only screen and (max-width: 600px) {
-
-    .home_img img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 40%;
-        align-content: center;
-
-    }
-}
-
-/* For large Screens */
-@media only screen and (min-width: 600px) {
-
-    .home_img img{
-        right: 0;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 50%;
-        align-content: center;
-    }
 }
