@@ -1,5 +1,5 @@
-/*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
 
 /*--------------------------------------------------------------
 # General
@@ -23,6 +23,130 @@ body {
   }
   
 /*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+    position: fixed;
+    display: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    right: 15px;
+    bottom: 15px;
+    background: #5777ba;
+    color: #fff;
+    transition: display 0.5s ease-in-out;
+    z-index: 99999;
+  }
+  
+  .back-to-top i {
+    font-size: 24px;
+    position: absolute;
+    top: 7px;
+    left: 8px;
+  }
+  
+  .back-to-top:hover {
+    color: #fff;
+    background: #748ec6;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  #main {
+    margin-top: 75px;
+  }
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+    padding: 15px 0;
+    background-color: #f6f8fb;
+    min-height: 40px;
+  }
+  
+  .breadcrumbs h2 {
+    font-size: 24px;
+    font-weight: 300;
+  }
+  
+  .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .breadcrumbs ol li + li {
+    padding-left: 10px;
+  }
+  
+  .breadcrumbs ol li + li::before {
+    display: inline-block;
+    padding-right: 10px;
+    color: #6c757d;
+    content: "/";
+  }
+  
+  @media (max-width: 768px) {
+    .breadcrumbs .d-flex {
+      display: block !important;
+    }
+    .breadcrumbs ol {
+      display: block;
+    }
+    .breadcrumbs ol li {
+      display: inline-block;
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # App Features
+  --------------------------------------------------------------*/
+  .features .content {
+    padding: 30px 0;
+  }
+  
+  .features .content .icon-box {
+    margin-top: 25px;
+  }
+  
+  .features .content .icon-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 0 10px 60px;
+  }
+  
+  .features .content .icon-box i {
+    font-size: 48px;
+    float: left;
+    color: #5777ba;
+  }
+  
+  .features .content .icon-box p {
+    font-size: 15px;
+    color: #979aa1;
+    margin-left: 60px;
+  }
+  
+  @media (max-width: 991px) {
+    .features .image {
+      text-align: center;
+    }
+    .features .image img {
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: 667px) {
+    .features .image img {
+      max-width: 100%;
+    }
+  }
+
+/*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
@@ -36,7 +160,14 @@ section {
   
   .section-title {
     text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 30px;
     padding-bottom: 30px;
+  }
+
+  .section-subtitle h4{
+    text-align: center;
+    padding-bottom: 20px;
   }
   
   .section-title h2 {
@@ -55,7 +186,8 @@ section {
 /*--------------------------------------------------------------
 # Home Section
 --------------------------------------------------------------*/
-#hero {
+#home {
+    height: 100%;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -63,7 +195,7 @@ section {
     margin-bottom: -75px;
   }
   
-  #hero::before {
+  #home::before {
     content: '';
     position: absolute;
     right: -100%;
@@ -75,7 +207,7 @@ section {
     transform: skewY(135deg);
   }
   
-  #hero h1 {
+  #home h1 {
     margin: 0 0 10px 0;
     font-size: 48px;
     font-weight: 500;
@@ -84,13 +216,13 @@ section {
     font-family: "Poppins", sans-serif;
   }
   
-  #hero h2 {
+  #home h2 {
     color: #515f7d;
     margin-bottom: 50px;
     font-size: 20px;
   }
   
-  #hero .download-btn {
+  #home .download-btn {
     font-family: "Raleway", sans-serif;
     font-weight: 500;
     font-size: 15px;
@@ -103,58 +235,122 @@ section {
     position: relative;
   }
   
-  #hero .download-btn:hover {
+  #home .download-btn:hover {
     background: #5777ba;
   }
   
-  #hero .download-btn i {
+  #home .download-btn i {
     font-size: 20px;
     position: absolute;
     left: 18px;
     top: 8.5px;
   }
   
-  #hero .download-btn + .download-btn {
+  #home .download-btn + .download-btn {
     margin-left: 20px;
   }
   
   @media (max-width: 991px) {
-    #hero {
+    #home {
       text-align: center;
     }
-    #hero .download-btn + .download-btn {
+    #home .download-btn + .download-btn {
       margin: 0 10px;
     }
-    #hero .hero-img {
+    #home .home__img {
       text-align: center;
     }
-    #hero .hero-img img {
+    #home .home__img img {
       width: 60%;
     }
   }
   
   @media (max-width: 768px) {
-    #hero h1 {
+    #home h1 {
       font-size: 28px;
       line-height: 36px;
     }
-    #hero h2 {
+    #home h2 {
       font-size: 18px;
       line-height: 24px;
       margin-bottom: 30px;
     }
-    #hero .hero-img img {
+    #home .hero-img img {
       width: 70%;
     }
   }
   
   @media (max-width: 575px) {
-    #hero .hero-img img {
+    #home .home-img img {
       width: 80%;
     }
   }
   
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .content {
+    padding: 30px 0;
+  }
+  
+  .about .content .icon-box {
+    margin-top: 25px;
+  }
+  
+  .about .content .icon-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 0 10px 60px;
+  }
+  
+  .about .content .icon-box i {
+    font-size: 48px;
+    float: left;
+    color: #5777ba;
+  }
+  
+  .about .content .icon-box p {
+    font-size: 15px;
+    color: #979aa1;
+    margin-left: 60px;
+  }
+  
+  @media (max-width: 991px) {
+    .about .image {
+      text-align: center;
+    }
+    .about .image img {
+      max-width: 80%;
+    }
+  }
+  
+  @media (max-width: 667px) {
+    .about .image img {
+      max-width: 100%;
+    }
+  }
 
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.skills .info {
+    padding: 20px 30px;
+    background: #f1f3f6;
+    color: #47536e;
+    text-align: center;
+    border: 1px solid #fff;
+  }
+  
+  .skills .info i {
+    font-size: 48px;
+    color: #9fb2d8;
+    margin-bottom: 15px;
+  }
+
+  .skills .info p {
+    font-size: 15px;
+  }
 
 /*--------------------------------------------------------------
 # Contact
@@ -306,6 +502,184 @@ section {
     }
     100% {
       transform: rotate(360deg);
+    }
+  }
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+    background: #fff;
+    padding: 0 0 30px 0;
+    color: #47536e;
+    font-size: 14px;
+    background: #eff2f8;
+  }
+  
+  #footer .footer-newsletter {
+    padding: 50px 0;
+    background: #eff2f8;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  #footer .footer-newsletter h4 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 600;
+    color: #47536e;
+  }
+  
+  #footer .footer-newsletter form {
+    margin-top: 30px;
+    background: #fff;
+    padding: 6px 10px;
+    position: relative;
+    border-radius: 50px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  #footer .footer-newsletter form input[type="email"] {
+    border: 0;
+    padding: 4px 8px;
+    width: calc(100% - 100px);
+  }
+  
+  #footer .footer-newsletter form input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    background: none;
+    font-size: 16px;
+    padding: 0 20px;
+    background: #5777ba;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 50px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  #footer .footer-newsletter form input[type="submit"]:hover {
+    background: #415f9d;
+  }
+  
+  #footer .footer-top {
+    padding: 60px 0 30px 0;
+    background: #fff;
+  }
+  
+  #footer .footer-top .footer-contact {
+    margin-bottom: 30px;
+  }
+  
+  #footer .footer-top .footer-contact h4 {
+    font-size: 22px;
+    margin: 0 0 30px 0;
+    padding: 2px 0 2px 0;
+    line-height: 1;
+    font-weight: 700;
+    color: #47536e;
+  }
+  
+  #footer .footer-top .footer-contact p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+    font-family: "Raleway", sans-serif;
+    color: #8a8c95;
+  }
+  
+  #footer .footer-top h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #47536e;
+    position: relative;
+    padding-bottom: 12px;
+  }
+  
+  #footer .footer-top .footer-links {
+    margin-bottom: 30px;
+  }
+  
+  #footer .footer-top .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #footer .footer-top .footer-links ul i {
+    padding-right: 2px;
+    color: #9fb2d8;
+    font-size: 18px;
+    line-height: 1;
+  }
+  
+  #footer .footer-top .footer-links ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  #footer .footer-top .footer-links ul li:first-child {
+    padding-top: 0;
+  }
+  
+  #footer .footer-top .footer-links ul a {
+    color: #8a8c95;
+    transition: 0.3s;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  #footer .footer-top .footer-links ul a:hover {
+    text-decoration: none;
+    color: #5777ba;
+  }
+  
+  #footer .footer-top .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #5777ba;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+  }
+  
+  #footer .footer-top .social-links a:hover {
+    background: #27282c;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  #footer .copyright {
+    text-align: center;
+    float: left;
+    color: #47536e;
+  }
+  
+  #footer .credits {
+    float: right;
+    text-align: center;
+    font-size: 13px;
+    color: #47536e;
+  }
+  
+  @media (max-width: 768px) {
+    #footer .copyright, #footer .credits {
+      float: none;
+      text-align: center;
+      padding: 5px 0;
     }
   }
   
