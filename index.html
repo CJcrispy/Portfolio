@@ -6,197 +6,416 @@
 
         <link rel="stylesheet" href="./css/style.css">
 
-        <!-- =====BOX ICONS===== -->
+        <title>Portfolio website complete</title>
+        <meta content="" name="descriptison">
+        <meta content="" name="keywords">      
+
+        <!-- Box Icons -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-        <title>Portfolio website complete</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+        
     </head>
     <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Chris</a>
-                </div>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
+        <!-- Header -->
+        <header>
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand">Chris</a>
+                    </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
+                     <!-- Responsive menu button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" (click)="toggleNavbar()">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse  navbar-right" [ngClass]="{ 'show': navbarOpen }" id="collapsibleNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item"><a href="#home" class="nav-link px-3">Home</a></li>
+                            <li class="nav-item"><a href="#about" class="nav-link px-3">About</a></li>
+                            <li class="nav-item"><a href="#skills" class="nav-link px-3">Skills</a></li>
+                            <li class="nav-item"><a href="#project" class="nav-link px-3">Projects</a></li>
+                            <li class="nav-item"><a href="#contact" class="nav-link px-3">Contact</a></li>
+                          </ul>
+                    </div>
+
                 </div>
             </nav>
-        </header>
+        </header> 
 
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Chris Copeland</span><br>
-                        <a href="" class="typewrite" data-period="2000" data-type='[ "Software Developer.", 
-                        "Software Tester.", "I Love to Develop." ]'>
-                            <span class="wrap"></span>
-                          </a>
-                    </h1>
-                    
-                    <a href="./resume/Christopher-Copeland Resume.pdf" class="button" target="_blank" download>Download CV</a>
-                </div>
+        <!-- Main body -->
+        <main id="main">
 
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/christopher-copeland-3aa599180/" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/CJcrispy" target="_blank" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
+            <!-- Home -->
+            <section id="home" class="d-flex align-items-center">
 
-                <div class="home__img">    
-                    <img src="./images/profile.jpg" alt="">
-                </div>
-            </section>
-
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="./images/work1.svg" alt="">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
+                      <div>
+                        <h1>Hi,<br>I'm <span>Chris Copeland</span><br>
+                            <a class="typewriter" data-period="2000" data-type='[ "Full Stack Developer.", 
+                            "Software Tester.", "Gamer." ]'>
+                                <span class="wrap"></span>
+                              </a>
+                        </h1>
+                        <a href="https://github.com/CJcrispy" target="_blank" class="download-btn home__social-icon"><i class="bx bxl-github"></i> Github</a>
+                        <a href="https://www.linkedin.com/in/christopher-copeland-3aa599180/" target="_blank" 
+                        class="download-btn home__social-icon"><i class="bx bxl-linkedin"></i> LinkedIn</a>
+                      </div>
                     </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'm Chris</h2>
-                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
-                    </div>                                   
+                    <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 home__img" data-aos="fade-up">
+                      <img class="img-fluid rounded" src="./images/profile.jpg" alt="">
+                    </div>
+                  </div>
                 </div>
+            
             </section>
 
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+            <!-- About -->
+            <section id="about" class="about">
+                <div class="container">
+        
+                    <div class="section-title">
+                        <h2>About</h2>
+                        <p>Hey, I'm Chris. I have BA in Computer Science from <a href="https://www.kean.edu/" target="_blank">Kean University</a>, New Jersey
+                        . I specialize in back-end developement and software testing but, I enjoy branching out and trying new things. 
+                        I enjoy creating REST APIs and CI/CD piplines.</p><br>
 
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
+                        <p>My fields of interests are Test Automation, CI/CD pipelines, and Security.</p><br>
 
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
+                        <p>I'm very passionate when trying new things that push my critical thinking and implmentation of various technologies.
+                            Currently, I'm not available for large freelance projects as I'm current working on the following <a href="#project">projects</a>. 
+                            Feel free to contact me and say hello anytime!</p>
+                    </div>
+            
+                    <div class="row no-gutters">
+                        <div class="col-xl-7 d-flex align-items-stretch order-2 order-lg-1">
+                            <div class="content d-flex flex-column justify-content-center">
+                                <h2>Certifications</h2>
+                                <div class="row">
+                                    <div class="col-md-6 icon-box" data-aos="fade-up">
+                                        <i class='bx bx-certification'></i>
+                                        <h4>ISTQB Foundation level</h4>
+                                        <p>pending</p>
+                                    </div>
+                                    <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                                        <i class='bx bx-certification'></i>
+                                        <h4>AWS Certified Developer - Associate</h4>
+                                        <p>pending</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
+                        
+                        <div class="image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+                            <img src="./images/Black Man Working on Analytics.svg" class="img-fluid rounded" alt="" style="width: 25rem;">
+                        </div>
+                    </div>
+        
+                </div>
+            </section>
+  
+            <!-- Skills -->
+            <section id="skills" class="skills">
+                <div class="container">
+  
+                    <div class="section-title">
+                        <h2>Skills & Tools</h2>
+                    </div>
+  
+                    <div class="row">
+  
+                        <div class="col-lg-12 section-subtitle">
+                            <div class="row">
+                                <!-- row 1 -->
+                                <div class="col-lg-3 info" data-aos="fade-up">
+                                    <i class="fab fa-java"></i>  
+                                    <p>Java</p>
+                                </div>
+    
+                                <div class="col-lg-3 info" data-aos="fade-up" data-aos-delay="100">
+                                    <i class="fab fa-python"></i>
+                                    <p>Python</p>
+                                   
+                                </div>
+
+                                <div class="col-lg-3 info" data-aos="fade-up" data-aos-delay="200">
+                                    <i class="fas fa-database"></i>
+                                    <p>PostgreSQL</p>
+                                    
+                                </div>
+
+                                <div class="col-lg-3 info" data-aos="fade-up" data-aos-delay="300">
+                                    <i class="fab fa-jenkins"></i>
+                                    <p>Jenkins</p>                             
+                                </div>
+
+                                <!-- row 2 -->
+                                <div class="col-lg-3 info" data-aos="fade-up">
+                                    <i class="fab fa-html5"></i>
+                                    <p>HTML</p>
+                                </div>
+
+                                <div class="col-lg-3 info" data-aos="fade-up" data-aos-delay="100">
+                                    <i class="fab fa-css3-alt"></i>
+                                    <p>CSS</p>
+                                </div>
+
+                                <div class="col-lg-3 info" data-aos="fade-up" data-aos-delay="200">
+                                    <i class="fab fa-js-square"></i>
+                                    <p>JavaScript</p>
+                                </div>
+
+                                <div class="col-lg-3 info" data-aos="fade-up" data-aos-delay="300">
+                                    <i class='bx bxl-bootstrap' ></i>
+                                    <p>Bootstrap</p>
+                                </div>
+
+                                <!-- row 3 -->
+                                <div class="col-lg-3 info" data-aos="fade-up">
+                                    <i class="fab fa-angular"></i>
+                                    <p>Angular</p>
+                                </div>
+
+                                <div class="col-lg-3 info" data-aos="fade-up" data-aos-delay="100">
+                                    <i class="fab fa-aws"></i>
+                                    <p>AWS</p>
+                                </div>
+
+                                <div class="col-lg-3 info" data-aos="fade-up" data-aos-delay="200"> 
+                                    <i class="fab fa-docker"></i>
+                                    <p>Docker</p>
+                                </div>
+                                
+                                <div class="col-lg-3 info" data-aos="fade-up" data-aos-delay="300">
+                                    <i class="fab fa-node-js"></i>
+                                    <p>Node JS</p>
+                                </div>
+
+                                <!-- row 4 -->
+                                <div class="col-lg-3 info" data-aos="fade-up">
+                                    <i class='bx bxl-git' ></i>
+                                    <p>Git</p>                                   
+                                </div>
+                                <div class="col-lg-3 info" data-aos="fade-up" data-aos-delay="100">
+                                    <i class='bx bxl-github' ></i>
+                                    <p>Github</p>
+                                </div>
+
                             </div>
-                            <div class="skills__bar skills__css">
+                        </div>
+  
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="project" class="contact">
+                <div class="container">
+  
+                    <div class="section-title">
+                        <h2>Projects</h2>
+                    </div>
+  
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card-deck">
+
+                                <div class="card" style="max-width: 20rem;">
+                                  <img class="card-img-top" src="./images/Black Family - Mom, Dad and Daughter.svg" alt="black_family_image">
+
+                                  <div class="card-body">
+                                    <h5 class="card-title">Black Box</h5>
+                                    <p class="card-text">A black-owned social media app.</p>
+                                  </div>
+                                  
+                                  <div class="card-footer">
+                                    <small class="text-muted">Coming Soon</small>
+                                  </div>
+                                </div>
+
+                                <div class="card" style="max-width: 20rem;">
+                                  <img class="card-img-top" src="./images/01-03.svg" alt="medical_image">
+
+                                  <div class="card-body">
+                                    <h5 class="card-title">Project Blue</h5>
+                                    <p class="card-text">A medical app with some useful features such as: Symptom checker, Doctors appointment, Hospital finder, etc.</p>
+                                  </div>
+
+                                  <div class="card-footer">
+                                    <small class="text-muted">Coming Soon</small>
+                                  </div>
+                                </div>
+
+                                <!-- <div class="card"  style="max-width: 20rem;">
+                                  <img class="card-img-top" src="..." alt="Card image cap">
+
+                                  <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                  </div>
+
+                                  <div class="card-footer">
+                                    <small class="text-muted">Last updated 3 mins ago</small>
+                                  </div>
+                                </div> -->
+
+                              </div>
+                        </div>
+  
+  
+                    </div>
+  
+                </div>
+            </section>          
+           
+
+            <!-- Contact -->
+            <section id="contact" class="contact">
+                <div class="container">
+  
+                <div class="section-title">
+                    <h2>Contact</h2>
+                    <p>Want to contact me? Feel free to follow me on my socials, fill out the form to message me or email me directly. I'm always open for a chat!</p>
+                </div>
+  
+                <div class="row">
+  
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-6 info" data-aos="fade-up">
+                                <i class="bx bxl-github"></i>
+                                <a href="https://github.com/CJcrispy" target="_blank"><h4>Github</h4></a>
                                 
                             </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
+
+                            <div class="col-lg-6 info" data-aos="fade-up" data-aos-delay="100">
+                                <i class="bx bxl-linkedin"></i>
+                                <a href="https://www.linkedin.com/in/christopher-copeland-3aa599180/" target="_blank"><h4>LinkedIn</h4></a>
                             </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
+
+                            <div class="col-lg-6 info" data-aos="fade-up" data-aos-delay="200">
+                                <i class="bx bxl-twitter"></i>
+                                <a href="https://twitter.com/CJcrispy_"target="_blank"><h4>Twitter</h4></a>
                             </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
+
+                            <div class="col-lg-6 info" data-aos="fade-up" data-aos-delay="300">
+                                <i class="bx bx-envelope"></i>
+                                <h4>Email Me</h4>
+                                <p>cjcopeland20@gmail.com</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
+  
+                    <div class="col-lg-6">
+                        <form method="post" action="./forms/contact.php" role="form" class="php-email-form" data-aos="fade-up">
+
+                            <div class="form-group">
+                                <input placeholder="Your Name" type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validate"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input placeholder="Your Email" type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                            <div class="validate"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <input placeholder="Subject" type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <div class="validate"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea placeholder="Message" class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
+                            <div class="validate"></div>
+                            </div>
+                            <div class="mb-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+
+                            <div class="text-center"><button type="submit" value="Send">Send Message</button></div>
+                        </form>
                     </div>
+  
                 </div>
-            </section>
-
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
-
-                <div class="work__container bd-grid">
-                    <div class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </div>
-                </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
-                    </form>
-                </div>
+  
+            </div>
             </section>
         </main>
 
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Chris/p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+            <div class="container py-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Chris Copeland</span></strong>. All Rights Reserved
             </div>
-            <p>&#169; 2020 copyright all right reserved</p>
+            <div class="credits">
+                Designed by Chris Copeland</a>
+            </div>
+            </div>
         </footer>
 
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+        <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
-        <!--===== MAIN JS =====-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/integration
+                emailjs.init('cjcopeland20@gmail.com');
+            })();
+        </script>
+            <script type="text/javascript">
+                window.onload = function() {
+                    document.getElementsByClassName('php-email-form').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        // generate a five digit number for the contact_number variable
+                        this.contact_number.value = Math.random() * 100000 | 0;
+                        // these IDs from the previous steps
+                        emailjs.sendForm('contact_service', 'contact_form', this);
+                    });
+                }
+            </script>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/jquery/jquery.min.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+        <script src="assets/vendor/venobox/venobox.min.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+        <!-- Main JS -->
         <script src="./js/main.js"></script>
+
     </body>
 </html>
