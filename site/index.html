@@ -238,96 +238,135 @@
   
                     <div class="section-title">
                         <h2>Projects</h2>
+                        <!-- <ul class="nav nav-tabs nav-fill " id="ex1" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" href="#web" id="web" role="tab" aria-controls="web" aria-selected="true">Web</a>
+                            </li>
+                            <li>
+                                <a href="">Back-end</a>
+                            </li>
+                            <li>
+                                <a href="">Testing</a>
+                            </li>
+                        </ul> -->
+                        <nav>
+                            <div>
+                                <ul class="nav nav-tabs nav-fill" role="tablist">
+                                    <li class="nav-item">
+                                        <a class=" nav-link active" data-toggle="tab" href="#web">Web</a>    
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#backend">Back-end</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#testing">Testing</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
                     </div>
   
-                    <div class="row ">
-                        <div class="col-lg-12 ">
-                            <div class="card-deck">
+                    <div class="tab-content py-3">
+                        <div class="tab-pane show active" id="web"> 
+                            <div class="row ">
+                                <div class="col-lg-12 ">
+                                    <div class="card-deck">
+                
+                                        <!-- <div class="card" style="max-width: 20rem;">
+                                          <img class="card-img-top" src="./images/01-03.svg" alt="medical_image">
+        
+                                          <div class="card-body">
+                                            <h5 class="card-title">Book of Eli</h5>
+                                            <p class="card-text">A medical app with some useful features such as: Symptom checker, Doctors appointment, Hospital finder, etc.</p>
+                                          </div>
+        
+                                          <div class="card-footer">
+                                            <small class="text-muted">Coming Soon</small>
+                                          </div>
+                                        </div> -->
+        
+                                        <div class="card"  style="max-width: 20rem;">
+                                          <img class="card-img-top" src="./images/black_man.svg" alt="portfolio_screenshot">
+        
+                                          <div class="card-body">
+                                            <h5 class="card-title">Portfolio</h5>
+                                            <p class="card-text">You're looking at it.</p>
+                                          </div>
+        
+                                          <div class="card-footer">
+                                            <i class="fab fa-html5"></i>
+                                            <i class="fab fa-css3-alt"></i>
+                                            <i class="fab fa-js-square"></i>
+                                            <i class='bx bxl-bootstrap' ></i>
+                                            <a href="https://github.com/CJcrispy/Portfolio" target="_blank" class="download-btn home__social-icon"><i class="bx bxl-github"></i> Github</a>
+                                          </div>
+                                        </div>      
+        
+                                      </div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="backend" role="tabpanel" aria-labelledby="backend">
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <div class="card-deck">
+                                        <div class="card" style="max-width: 20rem;">
+                                            <img class="card-img-top" src="./images/Black Family - Mom, Dad and Daughter.svg" alt="black_family_image">
+          
+                                            <div class="card-body">
+                                              <h5 class="card-title">Social Media core</h5>
+                                              <p class="card-text">A spring boot application with several apis based on a social media app.</p>
+                                            </div>
+                                            
+                                            <div class="card-footer">
+                                                <i class="fab fa-java"></i>
+                                              <a href="https://github.com/CJcrispy/Social-Media-API" target="_blank" class="download-btn home__social-icon"><i class="bx bxl-github"></i> Github</a>
+                                            </div>
+                                          </div>
 
-                                <div class="card" style="max-width: 20rem;">
-                                  <img class="card-img-top" src="./images/Black Family - Mom, Dad and Daughter.svg" alt="black_family_image">
-
-                                  <div class="card-body">
-                                    <h5 class="card-title">Black Box</h5>
-                                    <p class="card-text">A black-owned social media app.</p>
-                                  </div>
-                                  
-                                  <div class="card-footer">
-                                    <small class="text-muted">Coming Soon</small>
-                                  </div>
+                                          <div class="card"  style="max-width: 20rem;">
+                                            <img class="card-img-top" src="./images/math.svg" alt="portfolio_screenshot">
+            
+                                            <div class="card-body">
+                                              <h5 class="card-title">Sudoku</h5>
+                                              <p class="card-text">First python project.</p>
+                                            </div>
+            
+                                            <div class="card-footer">
+                                                <i class="fab fa-python"></i>
+               
+                                              <a href="https://github.com/CJcrispy/Sudoku-game" target="_blank" class="download-btn home__social-icon"><i class="bx bxl-github"></i> Github</a>
+                                            </div>
+                                          </div>
+                                    </div>
                                 </div>
-
-                                <div class="card" style="max-width: 20rem;">
-                                  <img class="card-img-top" src="./images/01-03.svg" alt="medical_image">
-
-                                  <div class="card-body">
-                                    <h5 class="card-title">Project Blue</h5>
-                                    <p class="card-text">A medical app with some useful features such as: Symptom checker, Doctors appointment, Hospital finder, etc.</p>
-                                  </div>
-
-                                  <div class="card-footer">
-                                    <small class="text-muted">Coming Soon</small>
-                                  </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="testing" role="tabpanel" aria-labelledby="testing">
+                            <div class="row">  
+                                <div class="col-lg-12">
+                                    <div class="card-deck">
+                                        <div class="card"  style="max-width: 20rem;">
+                                            <img class="card-img-top" src="./images/regression.svg" alt="portfolio_screenshot">
+            
+                                            <div class="card-body">
+                                              <h5 class="card-title">TestNG Regression</h5>
+                                              <p class="card-text">A UI test suite for dndbeyond.</p>
+                                            </div>
+            
+                                            <div class="card-footer">
+                                                <i class="fab fa-java"></i>
+               
+                                              <a href="https://github.com/CJcrispy/dndBeyond-ui-tests" target="_blank" class="download-btn home__social-icon"><i class="bx bxl-github"></i> Github</a>
+                                            </div>
+                                          </div>
+                                    </div>
                                 </div>
-
-                                <div class="card"  style="max-width: 20rem;">
-                                  <img class="card-img-top" src="./images/black_man.svg" alt="portfolio_screenshot">
-
-                                  <div class="card-body">
-                                    <h5 class="card-title">Portfolio</h5>
-                                    <p class="card-text">You're looking at it.</p>
-                                  </div>
-
-                                  <div class="card-footer">
-                                    <i class="fab fa-html5"></i>
-                                    <i class="fab fa-css3-alt"></i>
-                                    <i class="fab fa-js-square"></i>
-                                    <i class='bx bxl-bootstrap' ></i>
-                                    <a href="https://github.com/CJcrispy/Portfolio" target="_blank" class="download-btn home__social-icon"><i class="bx bxl-github"></i> Github</a>
-                                  </div>
-                                </div>
-
- 
-
-                              </div>
-                        </div>  
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-lg-12 ">
-                            <div class="card-deck">
-                                <div class="card"  style="max-width: 20rem;">
-                                    <img class="card-img-top" src="./images/regression.svg" alt="portfolio_screenshot">
-    
-                                    <div class="card-body">
-                                      <h5 class="card-title">TestNG Regression</h5>
-                                      <p class="card-text">A UI test suite for dndbeyond.</p>
-                                    </div>
-    
-                                    <div class="card-footer">
-                                        <i class="fab fa-java"></i>
-       
-                                      <a href="https://github.com/CJcrispy/dndBeyond-ui-tests" target="_blank" class="download-btn home__social-icon"><i class="bx bxl-github"></i> Github</a>
-                                    </div>
-                                  </div>
-    
-                                  <div class="card"  style="max-width: 20rem;">
-                                    <img class="card-img-top" src="./images/math.svg" alt="portfolio_screenshot">
-    
-                                    <div class="card-body">
-                                      <h5 class="card-title">Sudoku</h5>
-                                      <p class="card-text">First python project.</p>
-                                    </div>
-    
-                                    <div class="card-footer">
-                                        <i class="fab fa-python"></i>
-       
-                                      <a href="https://github.com/CJcrispy/Sudoku-game" target="_blank" class="download-btn home__social-icon"><i class="bx bxl-github"></i> Github</a>
-                                    </div>
-                                  </div>
                             </div>
                         </div>
                     </div>
+                    <br>
+
   
                 </div>
             </section>          
